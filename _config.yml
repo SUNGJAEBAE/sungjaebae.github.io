@@ -1,10 +1,8 @@
 title: Texture Theme
-author: GitHub User
-email: your-email@domain.com
+author: SUNGJAE BAE
+email: hsm0156@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  SUNGJAE BAE's portfolio
 show_excerpts: true # set to true to show excerpts on the homepage
 baseurl: ""
 
@@ -21,7 +19,7 @@ texture:
   style: green
   showNav: false
   showPicker: false
-
+  showNav: true
   # generate social links in footer
   social_links:
     # twitter: thelehhman
