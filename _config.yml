@@ -15,11 +15,10 @@ permalink: /posts/:title/
 texture:
   title: SUNGJAE BAE's portfolio
   tagline: Web Developer. Embedded Developer.
-  date_format: "%b %-d, %Y"
+  date_format: "%Y %M %D"
   style: green
   showNav: false
   showPicker: false
-  showNav: true
   # generate social links in footer
   social_links:
     # twitter: thelehhman
