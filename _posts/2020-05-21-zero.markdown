@@ -1,0 +1,11 @@
+---
+layout: post
+title: "setting my static blog as portfolio"
+date: 2020-05-21 21:41:36 +0530
+categories: static web deploy 
+---
+I made static blog, but didn't use a while. 
+I decided to make it as my portfolio, which seems good decision as it's near to my github repositories.
+If someone want to know how to make static blog, click below(written korean).
+## [you can run how to make static blog here]: https://devinlife.com/howto/
+
