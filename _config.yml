@@ -15,8 +15,8 @@ sass:
 
 permalink: /posts/:title/
 texture:
-  title: Adam Denisov
-  tagline: Developer. Designer
+  title: SUNGJAE BAE's portfolio
+  tagline: Web Developer. Embedded Developer.
   date_format: "%b %-d, %Y"
   style: green
   showNav: false
@@ -24,10 +24,10 @@ texture:
 
   # generate social links in footer
   social_links:
-    twitter: thelehhman
-    github: thelehhman
-    linkedIn: in/thelehhman
-    rss: rss
+    # twitter: thelehhman
+    github: SUNGJAEBAE
+    # linkedIn: in/thelehhman
+    # rss: rss
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
