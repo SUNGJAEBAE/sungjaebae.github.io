@@ -5,6 +5,8 @@ excerpt: "정적 블로그를 만들고 포트폴리오를 전시하기로 결�
 date: 2020-05-21
 categories: static web deploy 
 ---
+contact: hsm0156@gmail.com
+
 I made static blog, but didn't use a while. 
 I decided to make it as my portfolio, which seems good decision as it's near to my github repositories.
 If someone want to know how to make static blog, click below(written korean).
