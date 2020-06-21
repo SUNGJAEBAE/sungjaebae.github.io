@@ -1,0 +1,9 @@
+---
+layout: post
+title: "weather page by using weather api and google maps api"
+excerpt: "weather api와 google maps api를 활용한 날씨 페이지 만들기"
+date: 2020-06-22
+categories: vue front-end api
+---
+check weather link is able
+</statichtml/myweather.html>
