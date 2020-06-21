@@ -3,7 +3,7 @@ layout: post
 title: "control embedded RC car with pyqt gui and voice recognition"
 excerpt: "임베디드 RC카를 pyqt gui와 음성인식으로 제어하기"
 date: 2020-06-22
-categories: python pyqt aws mysql raspberrypi voice-recognition api
+categories: python pyqt aws mysql raspberrypi voice-recognition api google-cloud
 ---
 
 It's my SSAFY project for a semester with one teammate.

@@ -3,14 +3,22 @@ layout: post
 title: "weather page by using weather api and google maps api"
 excerpt: "weather api와 google maps api를 활용한 날씨 페이지 만들기"
 date: 2020-06-22
-categories: vue front-end api
+categories: vue front-end api google-cloud
 ---
 
 I upload this post in 06-22 but it was done around 02-20.
 
 It was my first time to use open api.
-I used weather api and google maps api.
+I used weather api and google static maps api.
 
 Input city name (ex seoul) to use below page!
 
 <https://sungjaebae.github.io/statichtml/myweather.html>
+
+
+I tried to use google maps javascript api, by changing codes in static maps api.
+
+But it didn't work and I found that to use google mapas javascript api in vue.js,
+you need to install package named vue-google-maps or make your own from the bottom.
+
+
