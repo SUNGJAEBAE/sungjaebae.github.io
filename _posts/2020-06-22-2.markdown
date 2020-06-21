@@ -5,5 +5,12 @@ excerpt: "weather api와 google maps api를 활용한 날씨 페이지 만들기
 date: 2020-06-22
 categories: vue front-end api
 ---
-check weather link is able
-</statichtml/myweather.html>
+
+I upload this post in 06-22 but it was done around 02-20.
+
+It was my first time to use open api.
+I used weather api and google maps api.
+
+Input city name (ex seoul) to use below page!
+
+<https://sungjaebae.github.io/statichtml/myweather.html>

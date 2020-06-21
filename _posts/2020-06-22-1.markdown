@@ -6,10 +6,12 @@ date: 2020-06-22
 categories: python pyqt aws mysql raspberrypi voice-recognition api
 ---
 
+It's my SSAFY project for a semester with one teammate.
  
 ![preview](/picture/2020-06-22-1.jpg)
 
-
+When user click pyqt5 gui, operating raspberry pi4(or window 10 computer) send control record to aws database.
+Embedded RC car can read database as it equipped raspberry pi zero w
 
 Videos are uploaded!
 
