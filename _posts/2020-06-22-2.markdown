@@ -1,16 +1,22 @@
 ---
 layout: post
-title: "weather page by using weather api and google maps api"
-excerpt: "weather api와 google maps api를 활용한 날씨 페이지 만들기"
+title: "control embedded RC car with pyqt gui and voice recognition"
+excerpt: "임베디드 RC카를 pyqt gui와 음성인식으로 제어하기"
 date: 2020-06-22
-categories: vue front-end api
+categories: python pyqt aws mysql raspberrypi voice-recognition api
 ---
 
-I upload this post in 06-22 but it was done around 02-20.
+It's my SSAFY project for a semester with one teammate.
+ 
+![preview](/picture/2020-06-22-1.jpg)
 
-It was my first time to use open api.
-I used weather api and google maps api.
+When user click pyqt5 gui, operating raspberry pi4(or window 10 computer) send control record to aws database.
+Embedded RC car can read database as it equipped raspberry pi zero w
 
-Input city name (ex seoul) to use below page!
+Videos are uploaded!
 
-<https://sungjaebae.github.io/statichtml/myweather.html>
+Full length presentation video but low quality and editting miss
+<https://www.youtube.com/watch?v=DKy_OB8I2uI>
+
+High quality presentation video about voice recognition
+<https://www.youtube.com/watch?v=seWmG5i_Tmw>

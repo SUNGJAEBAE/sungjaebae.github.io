@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "control embedded RC car with pyqt gui and voice recognition"
-excerpt: "임베디드 RC카를 pyqt gui와 음성인식으로 제어하기"
+title: "deploying django web at pythonanywhere"
+excerpt: "장고 웹서비스를 pythonanywhere에 배포했다"
 date: 2020-05-22
-categories: python pyqt voice-recognition
+categories: python django web deploy
 ---
 
 I studied django at fastcampus's online course.
