@@ -1,12 +1,14 @@
 ---
 layout: post
-title: "deploying django web at pythonanywhere"
-excerpt: "장고 웹서비스를 pythonanywhere에 배포했다"
+title: "control embedded RC car with pyqt gui and voice recognition"
+excerpt: "임베디드 RC카를 pyqt gui와 음성인식으로 제어하기"
 date: 2020-05-22
-categories: python django web deploy
+categories: python pyqt voice-recognition
 ---
 
 I studied django at fastcampus's online course.
-It was my first time to run web back-end, so I just typed codes lecture's code.
+I also studied django at my ssafy online live lecture before. 
+But I couldn't understand lecture, as it was my first time to learn back-end.
+Now I can understand most of django codes since I tried django a lot of time.
 
 <http://jgle.pythonanywhere.com/>
