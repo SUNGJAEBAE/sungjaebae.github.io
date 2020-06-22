@@ -1,0 +1,115 @@
+---
+layout: post
+title: "fastcampus lecture video downloader by using selenium"
+excerpt: "selenium으로 패스트캠퍼스 강의 동영상 다운로더 만들기"
+date: 2020-06-22
+categories: selenium crawler python
+---
+
+I made fastcampus lecture video downloader.
+I usually watch lecture in 3.0x to 4.0x speed by using chrome extension.
+
+However, fastcampus video streaming player can't download that much speed, as provider limited bandwidth.
+
+So I made the downloader, thanks to fastcampus selenium lecture!
+
+User must modify
+
+```python
+findingEleNum = 11  #다운받을 챕터
+start = 1 #챕터의 몇 번째 동영상부터 다운받을 것인지 지정
+end = 30 #챕터의 몇 번째 동영상까지 다운받을 것인지 지정
+courseURL = "https://www.fastcampus.co.kr/courses/200328/clips/" #course url
+fastcampusid = 'yourid@asdf.com'
+fastcampuspassword = 'yourpassword'
+#위의 변수들은 사용자가 설정해야한다.
+```
+
+Entire code is here.
+
+```python
+from selenium import webdriver
+import time
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
+from bs4 import BeautifulSoup
+import requests
+from tqdm import tqdm
+findingEleNum = 11  #다운받을 챕터
+start = 1 #챕터의 몇 번째 동영상부터 다운받을 것인지 지정
+end = 30 #챕터의 몇 번째 동영상까지 다운받을 것인지 지정
+courseURL = "https://www.fastcampus.co.kr/courses/200328/clips/"
+fastcampusid = 'yourid@asdf.com'
+fastcampuspassword = 'yourpassword'
+#위의 변수들은 사용자가 설정해야한다.
+
+chrome_options = Options()
+# chrome_options.add_argument("--headless")  # 브라우저가 실행안되고 안에서 실행됨
+chrome_options.add_argument("--mute-audio")
+for count in range(start, end+1):
+    browser = webdriver.Chrome(
+        'C:/tools/webdriver/chromedriver.exe', options=chrome_options)
+
+    browser.implicitly_wait(0.5)
+
+    browser.set_window_size(1200, 800)
+    browser.get("https://www.fastcampus.co.kr/me")
+    time.sleep(1)
+    element_id = browser.find_element_by_css_selector("#user-email")
+    element_password = browser.find_element_by_css_selector("#user-password")
+
+    element_id.send_keys(fastcampusid)
+    element_password.send_keys(fastcampuspassword)
+    element_password.submit()
+    time.sleep(1)
+    browser.get(courseURL)
+    # 로그인 성공, course로 이동
+    try:
+        WebDriverWait(browser, 10).until(EC.presence_of_element_located(
+            (By.CSS_SELECTOR, ".fco-confirm-modal__footer__cancel"))).click()
+    except:
+        pass
+    # 팝업 닫기
+    time.sleep(1)
+    try:
+        browser.find_element_by_css_selector(
+            f"div.fco-chapter-list > ul:nth-child({findingEleNum}) .fco-chapter-toggle-list__content")
+    except:
+        browser.find_element_by_css_selector(
+            f"div.fco-chapter-list > ul:nth-child({findingEleNum}) > li > div > div > div > span").click()
+    # 챕터가 이미 열려있으면 두고, 열려 있지 않으면 연다
+    time.sleep(1)
+    browser.find_element_by_css_selector(
+        f"div.fco-chapter-list > ul:nth-child({findingEleNum}) div.fco-chapter-toggle-list__content li:nth-child({count})").click()
+    time.sleep(1)
+    # 번호에 해당하는 탭을 연다
+    filename = browser.find_elements_by_css_selector(
+        f".fco-clip-list-item__right__info__title")[count-1].text
+
+    try:
+        WebDriverWait(browser, 3).until(EC.presence_of_element_located(
+            (By.CSS_SELECTOR, "div.fco-confirm-modal__header > div > svg"))).click()
+    except:
+        pass
+    time.sleep(1)
+    # 동영상을 재생시킨다. 관련 iframe이 로드된다.
+
+    frame = browser.find_elements_by_css_selector("iframe")[0]
+    browser.switch_to.frame(frame)
+    time.sleep(1)
+    ans = browser.find_element_by_css_selector("#kollus_player_html5_api")
+
+    chunk_size = 1024
+
+    url = ans.get_attribute('src')
+    r = requests.get(url, stream=True)
+    total_size = int(r.headers['content-length'])
+    with open(f'{filename}.mp4', 'wb') as f:
+        for chunk in tqdm(iterable=r.iter_content(chunk_size=chunk_size), total=total_size/chunk_size, unit='KB'):
+            f.write(chunk)
+
+    browser.close()
+
+```
