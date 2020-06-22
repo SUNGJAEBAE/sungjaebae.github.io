@@ -13,13 +13,15 @@ However, fastcampus video streaming player can't download that much speed, as pr
 
 So I made the downloader, thanks to fastcampus selenium lecture!
 
-User must modify
+![preview](/picture/2020-06-22-4.jpg)
+
+If user want to download chapter 02. node.js 핵심과정 (박준영), 1 to 6 then the user must modify
 
 ```python
-findingEleNum = 11  #다운받을 챕터
+findingEleNum = 2  #다운받을 챕터
 start = 1 #챕터의 몇 번째 동영상부터 다운받을 것인지 지정
-end = 30 #챕터의 몇 번째 동영상까지 다운받을 것인지 지정
-courseURL = "https://www.fastcampus.co.kr/courses/200328/clips/" #course url
+end = 6 #챕터의 몇 번째 동영상까지 다운받을 것인지 지정
+courseURL = "https://www.fastcampus.co.kr/courses/201760/clips/" #course url
 fastcampusid = 'yourid@asdf.com'
 fastcampuspassword = 'yourpassword'
 chromedriverpath = 'C:/tools/webdriver/chromedriver.exe'
@@ -38,14 +40,14 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import requests
 from tqdm import tqdm
-findingEleNum = 11  #다운받을 챕터
+findingEleNum = 2  #다운받을 챕터
 start = 1 #챕터의 몇 번째 동영상부터 다운받을 것인지 지정
-end = 30 #챕터의 몇 번째 동영상까지 다운받을 것인지 지정
-courseURL = "https://www.fastcampus.co.kr/courses/200328/clips/" #course url
+end = 6 #챕터의 몇 번째 동영상까지 다운받을 것인지 지정
+courseURL = "https://www.fastcampus.co.kr/courses/201760/clips/" #course url
 fastcampusid = 'yourid@asdf.com'
 fastcampuspassword = 'yourpassword'
 chromedriverpath = 'C:/tools/webdriver/chromedriver.exe'
-# 위의 변수들은 나중에 자동화하거나, 함수에서 디폴트값 넣는것처럼 해야겠다.
+#selenium 설치와 path를 설정해야한다.
 
 
 chrome_options = Options()
