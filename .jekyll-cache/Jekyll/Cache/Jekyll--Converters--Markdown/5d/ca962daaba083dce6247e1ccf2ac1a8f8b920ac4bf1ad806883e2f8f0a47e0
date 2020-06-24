@@ -1,0 +1,15 @@
+I"b<p>I upload this post in 06-22 but it was done around 02-20.</p>
+
+<p>It was my first time to use open api.
+I used weather api and google static maps api.</p>
+
+<p>Input city name (ex seoul) to use below page!</p>
+
+<p><a href="https://sungjaebae.github.io/statichtml/myweather.html">https://sungjaebae.github.io/statichtml/myweather.html</a></p>
+
+<p>I tried to use google maps javascript api, by changing codes in static maps api.</p>
+
+<p>But it didn’t work and I found that to use google mapas javascript api in vue.js,
+you need to install package named vue-google-maps or make your own from the bottom.</p>
+
+:ET
