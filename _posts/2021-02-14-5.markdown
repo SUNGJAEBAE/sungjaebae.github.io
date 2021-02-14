@@ -2,7 +2,7 @@
 layout: post
 title: "full stack app in docker multi containers deploy to AWS + AWS RDS"
 excerpt: "풀스택 어플리케이션을 도커 멀티 컨테이너로 AWS에 배포하고 DB는 AWS RDS를 사용했다"
-date: 2020-06-22
+date: 2021-02-14
 categories: docker aws fullstack
 ---
 I studied docker at Inflearn's online course.
@@ -11,7 +11,7 @@ I made 3 docker containers.
 - backend
 - nginx
 
-I uploaded 3 containers to docker hub.
+I uploaded 3 containers to docker hub by using github and travis CI. 
 After that, I made Dockerrun.aws.json to use AWS Elastic Beanstalk.
 Also, I made AWS RDS to use as DB server.
 
