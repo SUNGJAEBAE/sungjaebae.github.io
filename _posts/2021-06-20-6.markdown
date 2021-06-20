@@ -8,6 +8,9 @@ categories: C# winforms embedded devexpress
 I made testing tool for embedded communication device, especially using modbus/TCP.
 This tool cyclically writes to a holding register and also cyclically connect and disconnect to the device.
 This tool has MDI so multiple attempts can do in parallel. 
+![preview](/picture/211106.png)
+
+
 source code: <https://github.com/SUNGJAEBAE/ModbusStressTestTool>
 
 executable file: <https://drive.google.com/file/d/1HA1bbrsqWcVvJANkDN17yFcG3EfDpch2/view?usp=sharing>
