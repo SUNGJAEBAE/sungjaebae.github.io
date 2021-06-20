@@ -1,0 +1,13 @@
+---
+layout: post
+title: "C# winforms with devexpress tool for stress testing modbus/TCP device"
+excerpt: "modbus/TCP 스트레스 테스트를 위한 C# winforms with devpress 툴"
+date: 2021-02-14
+categories: docker aws fullstack
+---
+I made testing tool for embedded communication device, especially using modbus/TCP.
+This tool cyclically writes to a holding register and also cyclically connect and disconnect to the device.
+This tool has MDI so multiple attempts can do in parallel. 
+source code: <https://github.com/SUNGJAEBAE/ModbusStressTestTool>
+
+executable file: <https://drive.google.com/file/d/1HA1bbrsqWcVvJANkDN17yFcG3EfDpch2/view?usp=sharing>
